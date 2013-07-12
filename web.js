@@ -3,11 +3,11 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var index = fs.readFileSync("index.html");
-var buf = new Buffer(index);
+//var buf = new Buffer(index);
 
 app.get('/', function(request, response) {
-  response.send(buf.toString());
-
+  //response.send(buf.toString());
+  response.send(index.toString());
 });
 
 
