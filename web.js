@@ -7,11 +7,11 @@ var fs = require('fs');
 
 var indexFileBuffer = fs.readFileSync('./index.html');
 indexFileBuffer.write(indexFile);
-indexFileBuffer.toString();
 
 
 app.get('/', function(request, response) {
-  response.send(indexFile);
+//  response.send(indexFile);
+indexFileBuffer.toString(); 
 });
 
 var port = process.env.PORT || 5000;
